@@ -1,0 +1,53 @@
+.mynav {
+  padding: 10px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #2196f3; /* materialize css blue */
+}
+
+.modal-trigger {
+  position:absolute;
+  left:20px;
+  top:60px;
+}
+
+.modal { width: 80% !important ; height: 75% !important ; }
+
+.photorow {
+  margin-bottom: 8px; /* make small even with large */
+  width: 100%;
+  height: 100%;
+}
+
+.highlights {
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.highlight {
+  background-color: #d7deea;
+  color: gray;
+  padding: 10px;
+}
+
+.mycontainer {
+  padding: 10px;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.mycard {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#map {
+  height: 450px;
+}

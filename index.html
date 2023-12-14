@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>212 Mowat Drive</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+    <!-- Custom css and data -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="parcel.geojson"></script>
+
+  </head>
+  <body>
+
+    <div class='mynav'>
+      <span>4 bedroom family home or turn-key cottage in St. Andrews-by-the-sea</span>
+    </div>
+
+    <div class='row'>
+      <div class='col s12 m8 l6'>
+        <img src="photos/backdeck.jpg" class='photorow'>
+      </div>
+      <div class='col s12 m12 l3'>
+        <img src="photos/sidehouse.jpg" class='photorow'>
+      </div>
+      <div class='col s12 m12 l3'>
+        <img src="photos/deck.jpg" class='photorow'>
+      </div>
+
+      <div class="row">
+        <div class='col s12 m12 l3'>
+          <img src="photos/garden.jpg" class='photorow'>
+        </div>
+        <div class='col s12 m12 l3'>
+          <img src="photos/standrews.jpg" class='photorow'>
+        </div>
+      </div>
+
+      <a class="waves-effect waves-light white blue-text btn modal-trigger" href="#modal1"><i class="large material-icons">view_comfy</i><span style='vertical-align: 4px;'> See all 24 photos</span></a>
+
+    </div> <!-- first row -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>212 Mowat Drive, St Andrews, NB</h4>
+        <div class="row">
+          <div style="padding: 5px; padding-top:5px">
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/backdeck.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/sidehouse.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/deck.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/garden.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="padding: 5px; padding-top:5px">
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/spareview.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/gardenfence.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/yard.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/mudroom.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="padding: 5px; padding-top:5px">
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/kitchendoor.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/kitchen.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/plantsopen.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/plantsclose.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="padding: 5px; padding-top:5px">
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/dining.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/deckdoor.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/fireroom.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/firepit.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="padding: 5px; padding-top:5px">
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/mainbed.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/mainbed2.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/washlaundry.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/bunks.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="padding: 5px; padding-top:5px">
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/spareroom.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/kingroom.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/ensuite.jpg">
+            </div>
+            <div class="col s12 m3">
+              <img class="materialboxed" data-caption="" width="250" src="photos/ensuite2.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Dismiss</a>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col s12 l6'>
+        <h5>$399,999 CDN</h5>
+        212 Mowat Drive, Saint Andrews, NB E5B 2P3
+        <div class="highlights">
+            <span class='highlight'>Built in 1989</span>
+            <span class='highlight'>Addition built 2002</span>
+            <span class='highlight'>Land 1/3 acre</span>
+        </div>
+        <div class="highlights">
+            <span class='highlight'>Greenhouse</span>
+            <span class='highlight'>Fenced garden</span>
+            <span class='highlight'>Shed opens to garden</span>
+        </div>
+      </div>
+      <div class='col s12 l1'>
+        <h5>4</h5>
+        bedrooms
+      </div>
+      <div class='col s12 l1'>
+        <h5>2</h5>
+        baths
+      </div>
+      <div class='col s12 l1'>
+        <h5>2000</h5>
+        square feet
+      </div>
+
+      <div class="col s12 l3">
+        <div class="mycard">
+          <h5>For sale by owner</h5>
+          <p>
+            <a href='https://www.lawdepot.ca/contracts/real-estate-purchase-agreement/?loc=CA'  target="_blank">Create a purchase agreement (PDF)</a>
+            <br>
+            <a href='#contact'  target="_blank">Wish to buy the contents as well?</a>
+          </p>
+          <a class='waves-effect waves-light blue white-text btn' href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="mycontainer">
+      <hr>
+      <h5>What's special</h5>
+      <p>
+        Classic maritime cedar shake home on a quiet side street in Saint Andrews-by-the-sea, New Brunswick. This spacious house has lots of room for your family and friends. New and modern with 4 bedrooms, an office, dining room, fully equipped kitchen, a backyard with a large deck with a dining area, BBQ as well as a fire pit for smores with the kids after dinner. There is also a fenced side yard with another deck for lounging surrounded by your garden. The house has plenty of parking (4+) and is walking distance to restaurants, festivals, farmer's market, whale watching and deep sea fishing tours, Kingsbrae Gardens, Minister's island, Katy's Cove salt water swimming beach, our historic main street, and our beautiful waterfront. Please visit the town website for a full list amenities and events.
+      </p>
+      <div class="row">
+        <div class="col s6 m8 l1 chip blue white-text">High ceilings</div>
+        <div class="col s6 m8 l1 chip blue white-text">Walk in closets</div>
+        <div class="col s6 m8 l1 chip blue white-text">Ensuite</div>
+        <div class="col s6 m8 l2 chip blue white-text">Centre hall grand staircase</div>
+        <div class="col s6 m8 l2 chip blue white-text">Wildlife viewing picture window</div>
+        <div class="col s6 m8 l1 chip blue white-text">Pellet stove</div>
+        </div>
+      </div>
+
+      <hr>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div id='map'>
+    </div>
+
+    <div class="row">
+      <div class="mycontainer">
+        <hr>
+        <h5>Facts and features</h5>
+        <div class="col s12 m12 l6">
+          <h6>Beds and Baths</h6>
+          <ul style='list-style-type: square'>
+            <li>4 bedrooms</li>
+            <li>2 full bathrooms</li>
+          </ul>
+          <h6>Flooring</h6>
+          <ul style='list-style-type: square'>
+            <li>Laminate</li>
+          </ul>
+          <h6>Basement</h6>
+          <ul style='list-style-type: square'>
+            <li>None</li>
+          </ul>
+        </div>
+        <div class="col s12 m12 l6">
+          <h6>Heating and cooling</h6>
+          <ul style='list-style-type: square'>
+            <li>Heating: electric baseboards, pellett wood stove</li>
+            <li>Cooling: none</li>
+          </ul>
+          <h6>Appliances</h6>
+          <ul style='list-style-type: square'>
+            <li>Refridgerator</li>
+            <li>Electric stove</li>
+            <li>Above range microwave</li>
+            <li>Dishwasher</li>
+            <li>Clothes washer and dryer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer white black-text">
+      <div class="mycontainer">
+        <hr>
+        <div class="row">
+          <div id='contact' class="col l6 s12">
+            <h4 class="blue-text text-lighten-1">Contact</h4>
+            <h6 class="black-text">
+              Mark Hoel<br>
+              mdjhoel@gmail.com<br>
+              647-631-0260
+            </h6>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h4 class="blue-text text-lighten-1">Links</h4>
+            <ul>
+              <li><a class="black-text" href="https://www.townofsaintandrews.ca/" target="_blank">Town of Saint Andrews</a></li>
+              <li><a class="black-text" href="https://explorestandrews.ca/" target="_blank">Explore Saint Andrews</a></li>
+              <li><a class="black-text" href="https://www.algonquinresort.com/" target="_blank">Algonquin Hotel</a></li>
+              <li><a class="black-text" href="https://www.kingsbraegarden.com/" target="_blank">Kingsbrae Gardens</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright black-text">
+        <div class="container">
+          <p style='padding:8px'>© 2024 212 Mowat Drive</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems);
+    });
+    
+    map = new L.Map('map');
+    var cartocdn = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+    carto = new L.TileLayer(cartocdn);
+    map.setView([45.087,-67.06],16); // centered on SA lat, long
+    map.addLayer(carto);
+    
+    popup1 = new L.Popup();
+    var popupLocation1 = new L.LatLng(45.08497644724135, -67.06217779171354);
+    popup1.setLatLng(popupLocation1);
+    popup1.setContent("<h5>212 Mowat Drive</h5>Classic maritime small town charm. Spacious but accessible to downtown and ocean. Enjoy the comfort of a family home in the country but walk to everything St. Andrews has to offer.<br><br><a href='photos/backdeck.jpg' target='_blank'><img src='photos/backdeck_th.jpg'></a>");
+    map.addLayer(popup1)
+
+    g = L.geoJSON(features,{onEachFeature: bindIt}).addTo(map);
+    map.scrollWheelZoom.disable();
+
+    function bindIt(feature, layer) {
+      var popcontent = "<h5>212 Mowat Drive</h5>Classic maritime small town charm. Spacious but accessible to downtown and ocean. Enjoy the comfort of a family home in the country but walk to everything St. Andrews has to offer.<br><br><a href='photos/backdeck.jpg' target='_blank'><img src='photos/backdeck_th.jpg'></a>"
+          layer.bindPopup(popcontent,{minWidth:320});
+    }
+    
+
+  </script>
+
+  </html>
